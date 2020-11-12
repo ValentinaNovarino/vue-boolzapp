@@ -18,27 +18,26 @@ body {
 .left-container {
     width: 30%;
     height: 100%;
-    background-color: yellow;
     display: flex;
     flex-direction: column;
 }
 
-.header-left {
+.header-left, .header-right {
     width: 100%;
     height: 60px;
+    padding: 7px;
     background-color: lightgrey;
 }
 
-.user {
+.user-one, .user-two {
     width: 46px;
     height: 46px;
-    margin: 7px;
     background-color: grey;
     float: left;
     border-radius: 50%;
 }
 
-.header-icon {
+.header-icon-left {
     width: calc(100% - 60px);
     height: 100%;
     float: left;
@@ -47,8 +46,8 @@ body {
     align-items: center;
 }
 
-.header-icon i {
-    margin: 5px;
+.header-icon-left i, .header-icon-right i {
+    margin-left: 10px;
     font-size: 20px;
     color: grey;
 }
@@ -56,13 +55,14 @@ body {
 .notification {
     width: 100%;
     height: 60px;
+    padding: 7px;
     background-color: #00BFFF;
 }
 
 .sound {
     width: 46px;
     height: 46px;
-    margin: 7px;
+    margin-right: 3px;
     background-color: white;
     float: left;
     border-radius: 50%;
@@ -79,22 +79,90 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 12px;
+    padding-top: 5px;
 }
 
 .text a {
     font-size: 14px;
     color: grey;
 }
-.input {
+
+.input-search {
     width: 100%;
     height: 40px;
-    background-color: lightblue;
+    padding-left: 7px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.input-search i {
+    padding: 7px;
+    background-color: white;
+    color: grey;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+.input-search input {
+    width: 254px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+.chat-container {
+    width: 100%;
+    height: calc(100% - 160px);
+    background-color: green;
 }
 
 /* contenitore destra */
 .right-container {
     width: 70%;
     height: 100%;
-    background-color: blue;
+}
+
+.current-chat {
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    float: left;
+}
+
+.header-icon-right {
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.chat {
+    width: 100%;
+    height: 480px;
+    background-image: url(https://github.com/annalisadesantis/vue-boolzapp/blob/main/sfondochat.png?raw=true);
+}
+
+.send-message {
+    width: 100%;
+    height: 60px;
+    padding: 7px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.send-message i {
+    font-size: 20px;
+    margin: 0 20px;
+    color: grey;
+}
+
+.send-message input {
+    padding: 10px 7px;
+    width: 85%;
+    border: 1px solid grey;
+    border-radius: 3px;
 }
