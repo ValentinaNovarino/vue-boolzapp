@@ -46,7 +46,11 @@
                 <div class="right-container">
                     <div class="header-right">
                         <div class="current-chat">
-
+                            <img :src="contacts[contactIndex].avatar" alt="">
+                            <div class="current-chat-info">
+                                <p>{{ contacts[contactIndex].name }}</p>
+                                <p class="last-access">Ultimo accesso oggi alle 12.08</p>
+                            </div>
                         </div>
                         <div class="header-icon-right">
                             <i class="fas fa-search"></i>
