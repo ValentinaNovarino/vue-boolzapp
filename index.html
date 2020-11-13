@@ -38,8 +38,8 @@
                     </div>
                     <div class="contacts-list">
                         <div class="contact" v-for='(contact, index) in contacts'>
-                            <img :src="contacts[index].avatar" class="contact-img">
-                            <p class="contact-name">{{ contacts[index].name }}</p>
+                            <img :src="contact.avatar" class="contact-img" :alt='contact.name'>
+                            <p class="contact-name">{{ contact.name }}</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,9 @@
                         </div>
                     </div>
                     <div class="chat">
-
+                        <div class="chat-message" v-for='contact in contacts[contactIndex].messages'>
+                            <p>{{ contact.message }}</p>
+                        </div>
                     </div>
                     <div class="send-message">
                         <i class="far fa-smile"></i>
