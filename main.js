@@ -105,6 +105,16 @@ var app = new Vue (
                 this.contacts[this.contactIndex].messages.push(newItem);
 
                 this.newMessage = '';
+
+                setTimeout(() => {
+                    var newAnswer = {
+                        date:'10/01/2020 15:50:00' ,
+                        message: 'Ok',
+                        status: 'received'
+                    }
+
+                    this.contacts[this.contactIndex].messages.push(newAnswer);
+                }, 1000);
             }
         }
     }
