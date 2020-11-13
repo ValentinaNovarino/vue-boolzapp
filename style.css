@@ -6,12 +6,16 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background: linear-gradient(0deg, rgba(210,212,201,1) 80%, rgba(53,134,117,1) 80%);
+    background-repeat: no-repeat;
 }
 
 .container {
     height: 600px;
     width: 1000px;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
 }
 /* contenitore sinistra */
