@@ -2,6 +2,7 @@ var app = new Vue (
     {
         el: '#root',
         data: {
+            newMessage: '',
             contactIndex: 0,
             contacts: [
                 {
@@ -91,6 +92,19 @@ var app = new Vue (
         methods: {
             changeChat(i) {
                 this.contactIndex = i;
+            },
+            addMessage(newItem) {
+                var newItem = {
+                    date:'10/01/2020 15:50:00' ,
+                    message: '',
+                    status: 'sent'
+                }
+
+                newItem.message = this.newMessage;
+
+                this.contacts[this.contactIndex].messages.push(newItem);
+
+                this.newMessage = '';
             }
         }
     }

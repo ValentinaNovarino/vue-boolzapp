@@ -141,10 +141,18 @@ body {
     float: left;
 }
 
-.contact p {
+.contact-info {
+    height: 50px;
+    margin-left: 5px;
     float: left;
-    width: 210px;
-    height: 50px;line-height: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-info p:last-of-type {
+    font-size: 14px;
+    color: #C0C0C0;
 }
 
 .chat-container {
@@ -180,8 +188,9 @@ body {
     float: left;
 }
 
-.current-chat-info p.last-access {
+.current-chat-info p:last-of-type {
     font-size: 14px;
+    color: #C0C0C0;
 }
 
 .header-icon-right {
@@ -198,6 +207,7 @@ body {
     height: 480px;
     padding: 40px;
     background-image: url(https://github.com/annalisadesantis/vue-boolzapp/blob/main/sfondochat.png?raw=true);
+    overflow-y: scroll;
 }
 
 .message {
@@ -208,14 +218,14 @@ body {
 
 .sent {
     clear: both;
-    float: left;
-    background-color: white;
+    float: right;
+    background-color: #d9ffb3;
 }
 
 .received {
     clear: both;
-    float: right;
-    background-color: #d9ffb3;
+    float: left;
+    background-color: white;
 }
 
 .send-message {
