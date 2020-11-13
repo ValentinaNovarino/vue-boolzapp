@@ -87,6 +87,11 @@ var app = new Vue (
                     ],
                 },
             ]
+        },
+        methods: {
+            changeChat(i) {
+                this.contactIndex = i;
+            }
         }
     }
 );
