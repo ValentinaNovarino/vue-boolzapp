@@ -177,20 +177,26 @@ body {
 .chat {
     width: 100%;
     height: 480px;
-    padding: 50px;
+    padding: 40px;
     background-image: url(https://github.com/annalisadesantis/vue-boolzapp/blob/main/sfondochat.png?raw=true);
 }
 
-.chat .message .sent {
-    clear: both;
-    float: left;
-    color: white;
+.message {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
 }
 
-.chat .message .received {
+.sent {
     clear: both;
     float: left;
-    color: lightgreen;
+    background-color: white;
+}
+
+.received {
+    clear: both;
+    float: right;
+    background-color: #d9ffb3;
 }
 
 .send-message {

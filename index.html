@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="chat">
-                        <div class="chat-message" v-for='contact in contacts[contactIndex].messages'>
+                        <div class="message" v-for='contact in contacts[contactIndex].messages' :class='contact.status'>
                             <p>{{ contact.message }}</p>
                         </div>
                     </div>
