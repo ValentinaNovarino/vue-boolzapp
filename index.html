@@ -34,7 +34,7 @@
                     </div>
                     <div class="input-search">
                         <a href="#"><i class="fas fa-search"></i></a>
-                        <input type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+                        <input @keyup='contactFilter()' type="text" name="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="contacts-list">
                         <div @click='changeChat(index)' class="contact" v-for='(contact, index) in contacts'>

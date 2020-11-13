@@ -2,6 +2,7 @@ var app = new Vue (
     {
         el: '#root',
         data: {
+            textFilter: '',
             newMessage: '',
             contactIndex: 0,
             contacts: [
@@ -45,7 +46,7 @@ var app = new Vue (
                         {
                             date: '20/03/2020 16:35:00',
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                            status: 'received'
+                            status: 'sent'
                         }
                     ],
                 },
@@ -115,6 +116,18 @@ var app = new Vue (
 
                     this.contacts[this.contactIndex].messages.push(newAnswer);
                 }, 1000);
+            },
+            contactFilter() {
+                var userSearch = this.textFilter.toLowerCase();
+                console.log(userSearch);
+
+                this.contacts.forEach((item) => {
+                    if (item.name.toLowerCase().includes(userSearch)) {
+                        item.visible = true;
+                    } else {
+                        item.visible = false;
+                    }
+                });
             }
         }
     }
