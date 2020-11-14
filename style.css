@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* proprietà CSS generali */
 body {
     font-family: 'Lato', sans-serif;
     background: linear-gradient(0deg, rgba(218,219,213,1) 80%, rgba(53,134,117,1) 80%);
@@ -19,14 +20,6 @@ body {
     display: flex;
 }
 
-/* contenitore sinistra */
-.left-container {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .header-left, .header-right {
     width: 100%;
     height: 60px;
@@ -38,7 +31,39 @@ body {
     width: 46px;
     height: 46px;
     float: left;
-    border-radius: 50%;
+}
+
+.header-icon-left i, .header-icon-right i {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #C0C0C0;
+    cursor: pointer;
+}
+
+/* classi per messaggi inviati e ricevuti */
+.sent {
+    clear: both;
+    float: right;
+    background-color: #d9ffb3;
+}
+
+.received {
+    clear: both;
+    float: left;
+    background-color: white;
+}
+
+/* contenitore sinistra */
+.left-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-one img {
+    border-radius: 100%;
+    background-color: white;
 }
 
 .header-icon-left {
@@ -48,12 +73,6 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.header-icon-left i, .header-icon-right i {
-    margin-left: 10px;
-    font-size: 20px;
-    color: #C0C0C0;
 }
 
 .notification {
@@ -106,8 +125,8 @@ body {
     background-color: white;
     border: 1px solid #F5F5F5;
     border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -119,8 +138,9 @@ body {
     padding-top: 5px;
     padding-bottom: 6px;
     border: 1px solid #F5F5F5;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    outline: none;
 }
 
 .contacts-list {
@@ -161,12 +181,6 @@ body {
     color: #C0C0C0;
 }
 
-.chat-container {
-    width: 100%;
-    height: calc(100% - 160px);
-    background-color: green;
-}
-
 /* contenitore destra */
 .right-container {
     width: 70%;
@@ -185,7 +199,7 @@ body {
     height: 45px;
     width: 45px;
     border-radius: 100%;
-    background-color: #F5F5F5;
+    background-color: white;
     float: left;
 }
 
@@ -222,18 +236,6 @@ body {
     border-radius: 7px;
 }
 
-.sent {
-    clear: both;
-    float: right;
-    background-color: #d9ffb3;
-}
-
-.received {
-    clear: both;
-    float: left;
-    background-color: white;
-}
-
 .send-message {
     width: 100%;
     height: 60px;
@@ -246,12 +248,14 @@ body {
 .send-message i {
     font-size: 20px;
     margin: 0 20px;
-    color: #C0C0C0;
+    color: #696969;
+    cursor: pointer;
 }
 
 .send-message input {
     padding: 10px 7px;
     width: 85%;
-    border: 1px solid #C0C0C0;
+    border: 1px solid #F5F5F5;
     border-radius: 3px;
+    outline: none;
 }

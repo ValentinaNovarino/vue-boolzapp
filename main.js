@@ -117,18 +117,6 @@ var app = new Vue (
                     this.contacts[this.contactIndex].messages.push(newAnswer);
                 }, 1000);
             },
-            contactFilter() {
-                var userSearch = this.textFilter.toLowerCase();
-                console.log(userSearch);
-
-                this.contacts.forEach((item) => {
-                    if (item.name.toLowerCase().includes(userSearch)) {
-                        item.visible = true;
-                    } else {
-                        item.visible = false;
-                    }
-                });
-            }
         }
     }
 );

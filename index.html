@@ -15,7 +15,7 @@
                 <div class="left-container">
                     <div class="header-left">
                         <div class="user-one">
-
+                            <img src="https://boolzap.netlify.app/img/Martina.svg" alt="">
                         </div>
                         <div class="header-icon-left">
                             <i class="fas fa-circle-notch"></i>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="input-search">
                         <a href="#"><i class="fas fa-search"></i></a>
-                        <input @keyup='contactFilter()' type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" name="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="contacts-list">
                         <div @click='changeChat(index)' class="contact" v-for='(contact, index) in contacts'>
