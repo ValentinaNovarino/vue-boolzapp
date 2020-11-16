@@ -9,7 +9,7 @@ var app = new Vue (
                 {
                     name: 'Michele',
                     avatar: 'https://boolzap.netlify.app/img/Marco.svg',
-                    visibile: true,
+                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -31,7 +31,7 @@ var app = new Vue (
                 {
                     name: 'Fabio',
                     avatar: 'https://boolzap.netlify.app/img/Roberto.svg' ,
-                    visibile: true,
+                    visible: true,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -53,7 +53,7 @@ var app = new Vue (
                 {
                     name: 'Samuele',
                     avatar: 'https://boolzap.netlify.app/img/Harry.svg' ,
-                    visibile: true,
+                    visible: true,
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -73,7 +73,7 @@ var app = new Vue (
                 {
                     name: 'Luisa',
                     avatar: 'https://boolzap.netlify.app/img/Francesca.svg' ,
-                    visibile: true,
+                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -117,6 +117,23 @@ var app = new Vue (
                     this.contacts[this.contactIndex].messages.push(newAnswer);
                 }, 1000);
             },
-        }
+            searchContact() {
+                // variabile per salvare il valore scritto dall'utente
+                var userSearch = this.textFilter.toLowerCase();
+                // console.log(userSearch);
+
+                // Scorro l'array
+                this.contacts.forEach((item) => {
+                    if (item.name.toLowerCase().includes(userSearch)) {
+                        item.visible = true;
+                    } else {
+                        item.visible = false;
+                    }
+                    // console.log(item.visible);
+                });
+
+            }
+
+        },
     }
 );

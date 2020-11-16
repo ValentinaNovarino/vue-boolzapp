@@ -159,6 +159,14 @@ body {
     cursor: pointer;
 }
 
+.contact:hover {
+    background-color: #DCDCDC;
+}
+
+.active {
+    background-color: #DCDCDC;
+}
+
 .contact img {
     height: 50px;
     width: 50px;

@@ -12,6 +12,7 @@
 
         <div id="root">
             <div class="container">
+                <!-- contenitore sinistra -->
                 <div class="left-container">
                     <div class="header-left">
                         <div class="user-one">
@@ -32,12 +33,14 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
+                    <!-- ricerca contatti -->
                     <div class="input-search">
                         <a href="#"><i class="fas fa-search"></i></a>
-                        <input type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" name="search" placeholder="Cerca o inizia una nuova chat" v-model='textFilter' @keyup='searchContact'>
                     </div>
+                    <!-- contenitore contatti -->
                     <div class="contacts-list">
-                        <div @click='changeChat(index)' class="contact" v-for='(contact, index) in contacts'>
+                        <div v-for='(contact, index) in contacts' @click='changeChat(index)' class="contact" :class='index == contactIndex ? "active" : ""' v-if='contact.visible'>
                             <img :src="contact.avatar" class="contact-img" :alt='contact.name'>
                             <div class="contact-info">
                                 <p class="contact-name">{{ contact.name }}</p>
@@ -46,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- contenitore destra -->
                 <div class="right-container">
                     <div class="header-right">
                         <div class="current-chat">
@@ -61,6 +65,7 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
+                    <!-- contenitore messaggi -->
                     <div class="chat">
                         <div class="message" v-for='contact in contacts[contactIndex].messages' :class='contact.status'>
                             <p>{{ contact.message }}</p>
