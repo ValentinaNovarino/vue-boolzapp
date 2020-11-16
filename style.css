@@ -242,6 +242,33 @@ body {
     padding: 10px;
     margin: 10px;
     border-radius: 7px;
+    position: relative;
+}
+
+.message p {
+    display: inline-block;
+}
+
+.message i {
+    margin-left: 10px;
+    color: #C0C0C0;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 150px;
+    padding: 5px;
+    display: inline-block;
+    color: grey;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.message .dropdown-menu i {
+    margin-left: 0;
 }
 
 .send-message {

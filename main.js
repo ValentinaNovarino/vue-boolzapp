@@ -131,7 +131,9 @@ var app = new Vue (
                     }
                     // console.log(item.visible);
                 });
-
+            },
+            deleteMessage(i) {
+                this.contacts[this.contactIndex].messages.splice(i, 1);
             }
 
         },

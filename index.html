@@ -67,8 +67,13 @@
                     </div>
                     <!-- contenitore messaggi -->
                     <div class="chat">
-                        <div class="message" v-for='contact in contacts[contactIndex].messages' :class='contact.status'>
+                        <div class="message" v-for='(contact, index) in contacts[contactIndex].messages' :class='contact.status'>
                             <p>{{ contact.message }}</p>
+                            <i class="fas fa-angle-down"></i>
+                            <div class="dropdown-menu">
+                                <i class="far fa-trash-alt"></i>
+                                <p @click='deleteMessage(index)'>Delete message</p>
+                            </div>
                         </div>
                     </div>
                     <div class="send-message">
