@@ -78,7 +78,7 @@
                     </div>
                     <div class="send-message">
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio" v-model='newMessage' v-on:keyup.13='addMessage(newMessage)'>
+                        <input type="text" placeholder="Scrivi un messaggio" v-model='newMessage' @keyup.enter='addMessage'>
                         <i class="fas fa-microphone"></i>
                     </div>
                 </div>
